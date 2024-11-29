@@ -1,0 +1,291 @@
+@font-face {
+    font-family: "Sofia Sans";
+    src: url("/fonts/SofiaSans-VariableFont_wght.ttf") format('ttf');
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {        
+    background-color: #F8D080;
+    margin: 0;                           /* Внешний отступ на всех четырех сторонах элнмента */
+    padding: 0;                          /* Внутренние отступы/поля на всех четырех сторонах элнмента */                                      
+    font-family: "Sofia Sans";               /* Шрифт 'Sofia Sans' */
+    line-height: 1.6;                                /* Высота строки */
+}
+
+header {
+    font-family: "Sofia Sans"; 
+    background-color: #502000;                 /* Фон */
+    color: #ffffff;                      /* Текст */
+    padding: 1rem 0;                    /* Вертикальные отступы по 1rem сверху и снизу */
+    text-align: center;
+}
+
+/* Навигационное меню */
+nav ul {
+    font-family: "Sofia Sans"; 
+    list-style: none;            /* Убирает маркеры списка */
+    display: flex;               /* Выстраивание элементов в строку */
+    justify-content: center;     /* Элементы списка по центру */
+}
+
+nav ul li {
+    font-family: "Sofia Sans"; 
+    margin: 0 15px;         /* Горизонтальный отступ между элементами списка */
+}
+
+nav a {
+    font-family: "Sofia Sans"; 
+    color: #ffffff;          /* Устанавливает цвет текста ссылок в белый */
+    text-decoration: none;     /* Убирает подчеркивание у ссылок */
+    font-weight: 700;          /* Задает жирное начертание текста ссылки */
+}
+
+nav a:hover {
+    font-family: "Sofia Sans"; 
+    text-decoration: underline;     /* При наведении на ссылку она подчеркивается */
+}
+
+main {
+    font-family: "Sofia Sans"; 
+    padding: 20px;
+}
+
+.button {
+    font-family: "Sofia Sans"; 
+    background-color: #C86808; 
+    border: none;                   
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.button-2 {
+    font-family: "Sofia Sans"; 
+    background-color: #C86808; 
+    border: none;                   
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: none; /* Скрываем кнопку изначально */
+    margin-top: 20px; /* Отступ сверху, чтобы кнопка не прилипала к другим элементам */
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.input-field {
+    font-family: "Sofia Sans"; 
+    background-color: #C86808; 
+    border: none;                     /* Не выделяем границы кнопки */
+
+    width: 300px;                     /* Фиксированная ширина кнопки */
+    overflow: hidden;                /* Скрыть переполнение */
+    text-overflow: ellipsis;         /* Добавить троеточие, если текст не помещается */
+    white-space: nowrap;             /* Запретить перенос строки */
+    
+    color: #ffffff;                /* Цвет текста */
+    padding: 15px 32px;              /* Подобный размер отступов */
+    text-align: center;             /* Центрирование текста */
+    display: inline-block;          /* Выравнивание по стилю кнопок */
+    font-size: 16px;                /* Размер шрифта */
+    border-radius: 5px;             /* Скругленные углы */
+}
+
+.input-field::placeholder {
+    font-family: "Sofia Sans"; 
+    color: #ffffff; /* Цвет плейсхолдера */
+    opacity: 0,3; /* Небольшая прозрачность плейсхолдера */
+}
+
+
+h1, h2 {
+    font-family: "Sofia Sans"; 
+    margin-bottom: 10px;
+}
+
+footer {
+    font-family: "Sofia Sans"; 
+    text-align: center;
+    padding: 1rem 0;
+    background: #502000;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 768px) {      /* Адаптивность к устройствам меньшего размера экрана, 768 пикселей и меньше */
+    nav ul {
+        flex-direction: column;         /* Объекты располагаются один под другим */
+        align-items: center;            /* Элементы по центру */
+    }
+
+    nav ul li {
+        margin: 10px 0;       /* Вертикальный отступ 10 пикселей сверху и снизу для каждого элемента списка */
+    }
+
+    .container {
+        flex-direction: column; /* Переключаем направление флекс-контейнера на вертикальное */
+        align-items: flex-start; /* Выравнивание элементов по левому краю */
+    }
+
+    .image {
+        width: auto;
+        margin: 0 0 10px 0; /* Убираем правый отступ и добавляем нижний отступ для изображения */
+        opacity: 0; /* Начальное состояние - невидима */
+        animation: fadeIn 2s forwards; /* Запуск анимации fadeIn */
+    }
+    .image_long {
+        width: 400px;
+        height: 200px;
+        margin: 0 0 10px 0; /* Убираем правый отступ и добавляем нижний отступ для изображения */
+        opacity: 0; /* Начальное состояние - невидима */
+        animation: fadeIn 2s forwards; /* Запуск анимации fadeIn */
+    }
+
+    .container_2 {
+        flex-direction: column; /* Переключаем направление флекс-контейнера на вертикальное */
+        align-items: flex-start; /* Выравнивание элементов по левому краю */
+    }
+
+    .button {
+        font-family: "Sofia Sans"; 
+        background-color: #C86808; 
+        border: none;   
+        height: 80px;  
+        width: 140px;               
+        color: #ffffff;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    
+    .input-field {
+        font-family: "Sofia Sans"; 
+        background-color: #C86808; 
+        border: none;                     /* Не выделяем границы кнопки */
+    
+        width: 190px;                     /* Фиксированная ширина кнопки */
+        height: 80px;
+        overflow: hidden;                /* Скрыть переполнение */
+        text-overflow: ellipsis;         /* Добавить троеточие, если текст не помещается */
+        white-space: nowrap;             /* Запретить перенос строки */
+        
+        color: #ffffff;                /* Цвет текста */
+        padding: 15px 32px;              /* Подобный размер отступов */
+        text-align: center;             /* Центрирование текста */
+        display: inline-block;          /* Выравнивание по стилю кнопок */
+        font-size: 16px;                /* Размер шрифта */
+        border-radius: 5px;             /* Скругленные углы */
+    }
+}
+
+/* Carousel */
+.carousel {
+    position: relative;              /* Относительное размещение элементов контейнера */
+    max-width: 600px;                /* Ширина */
+    margin: auto;                    /* По центру */
+    overflow: hidden;                /* Скрывает часть изображений, которые не входят в видимую область карусели */
+    border: 2px solid #605838;     /* Рамка карусели: ширина и цвет */
+    border-radius: 10px;             /* Закругленные углы */
+}
+.carousel-images {
+    display: flex;       /* Выстраивание изображений в одну строку */
+    transition: transform 0.5s ease-in-out;  /* плавный переход при переключении изображений с длительностью 0,5 секунды и эффектом ускорения в начале и замедления в конце */
+}
+.carousel-images img {
+    max-width: 100%;        /* Изображения не будут превышать ширину своего родительского контейнера и будут адаптироваться под размеры */
+    display: block;     /* Устанавливает изображение как блочный элемент, что устраняет пробелы под ним */
+}
+
+/* Индикаторы переключения */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;                    /* Размещает индикаторы на расстоянии 10 пикселей от нижней части карусели */
+    left: 50%;                       /* Индикаторы по центру */
+    transform: translateX(-50%);     /* Сдвигает индикаторы влево на 50% их ширины, чтобы они были точно по центру */
+}
+
+.carousel-indicators label {
+    cursor: pointer;                     /* Изменяет курсор на указатель при наведении, показывая, что элемент кликабельный */
+    height: 20px;                        /* Размеры для индикаторов */
+    width: 20px;
+    background-color: #605838;         /* Фон */ 
+    display: inline-block;               /* Индикаторы в одной строке */
+    border-radius: 50%;                  /* Закругленные индикаторы */
+    margin: 0 5px;                       /* Отступы по горизонтали между индикаторами */
+}
+/* Визуальные состояния переключателей в карусели*/
+#slide1:checked ~ .carousel-images {
+    transform: translateX(0%);           /* Если переключатель slide1 активен, карусель не сдвигается (изображение не сдвигается от начальной позиции) */
+}
+#slide2:checked ~ .carousel-images {
+    transform: translateX(-100%);       /* При активном состоянии второго переключателя карусель сдвигается на 100% влево, показывая второе изображение */
+}
+#slide3:checked ~ .carousel-images {
+    transform: translateX(-200%);      /* При активном состоянии третьего переключателя карусель сдвигается на 200% влево, показывая третье изображение */
+}
+/* Animation */
+.special-div {
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    background-color: #A89870;
+    font-weight: bold;
+    position: relative;         
+    animation: mymove 7s infinite;
+  }
+
+#div1 {animation-timing-function: linear;}       /* С постоянной скоростью от начала до конца */
+#div2 {animation-timing-function: ease;}         /* Начинает медленно, затем ускоряется, а ближе к концу снова замедляется */
+#div3 {animation-timing-function: ease-in;}      /* Начинает медленно и постепенно ускоряется */
+#div4 {animation-timing-function: ease-out;}     /* Начинается быстро и затем замедляется к концу */ 
+#div5 {animation-timing-function: ease-in-out;}  /* Начинает медленно, ускоряется в средней части и затем снова замедляется перед завершением */
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 600px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 600px;}
+}
+/* Картинка слева от текста */
+.container {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+}
+/* Анимация картинки */
+.image {
+    margin: 20px; /* Отступ между картинкой и текстом */
+    opacity: 0; /* Начальное состояние - невидима */
+    animation: fadeIn 2s forwards; /* Запуск анимации fadeIn */
+}
+
+.image_long {
+    margin: 0 0 10px 0; /* Убираем правый отступ и добавляем нижний отступ для изображения */
+    opacity: 0; /* Начальное состояние - невидима */
+    animation: fadeIn 2s forwards; /* Запуск анимации fadeIn */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;    /* Конечное состояние - полностью видно */
+    }
+}
+/* Картинка справа от текста */
+.container_2 {
+    margin-left: 10px;
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: space-between; /* Размещаем элементы с наибольшим расстоянием между ними */
+}
